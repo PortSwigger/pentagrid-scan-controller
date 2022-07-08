@@ -1,13 +1,13 @@
-Uuid: 
+Uuid: e3dde890bdce4ae4bcef0d97019f5d46
 ExtensionType: 1
-Name: 5# Scan Controller
-RepoName: PentagridScanController
+Name: Pentagrid Scan Controller
+RepoName: pentagrid-scan-controller
 ScreenVersion: 0.1
-SerialVersion: 1
+SerialVersion: 0
 MinPlatformVersion: 0
 ProOnly: True
-Author: Tobias "floyd" Ospelt, Pentagrid AG
+Author: Tobias 'floyd' Ospelt, @floyd_ch
 ShortDescription: Improve automated and semi-automated active scanning
 EntryPoint: build/libs/PentagridScanController-0.1.jar
-BuildCommand: ./gradlew jar
+BuildCommand: ./gradlew clean build jar
 SupportedProducts: Pro
