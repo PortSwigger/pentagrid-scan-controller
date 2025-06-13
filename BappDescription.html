@@ -1,15 +1,22 @@
-<p><strong>Requirements:</strong> This extension uses Hackvertor tags. Make sure Hackvertor is installed and active.</p>
+<p>Pentagrid Scan Controller enhances automated and semi-automated active scanning by intelligently filtering and preprocessing requests. It aims to reduce unnecessary scans, such as those targeting static files or non-repeatable requests, by assessing repeatability and injecting Hackvertor tags when needed. The extension provides transparency for each decision, allowing users to adjust behaviors as necessary.</p>
 
-<p>Improve Automated and Semi-Automated Active Scanning</p>
-<p>Active Scanning might often do things that don't make much sense, such as scanning GET requests to static .js files or scanning non-repeatable requests. This extension allows you to filter and preprocess according to your needs. It tries to check if a request is repeatable or not. If a request is not repeatable, it tries to make it repeatable by injecting Hackvertor tags. This extension doesn't try to be perfect, but useful. It cuts corners and in some cases simply doesn't scan certain requests. However, the extension individually displays and explains all decisions, allowing you to change the settings if you don't like the behavior.</p>
-
-<p>How to use this extension</p>
-<p>Usage is very simple:</p>
+<h2>Features</h2>
 <ul>
-	<li>Add the website you test to the scope</li>
-	<li>Enable "Proxy requests" in the tab/section "Scan &gt; Options &gt; Requests to process"</li>
-	<li>Browse the web application (proxy) by using the Burp built-in browser.</li>
-	<li>Check back on the $tabName tab and see which request have been active scanned. Check those that have a high "Interesting" rating but haven't been scanned ("Scanned" column set to false)</li>
-	<li>See the Dashboard for Active Scan findings</li>
-	<li>It's always good to sort by the reason column in the UI and check the different reasons.</li>
+  <li>Identifies and filters out non-repeatable or irrelevant requests from active scanning.</li>
+  <li>Attempts to make non-repeatable requests repeatable using Hackvertor tags.</li>
+  <li>Displays detailed reasons for scanning decisions, enabling user review and customization.</li>
+  <li>Improves performance by minimizing redundant or ineffective scan traffic.</li>
 </ul>
+
+<h2>Usage</h2>
+<ol>
+  <li>Add the target website to the scope.</li>
+  <li>Enable <code class="InlineCode">Proxy requests</code> under <code class="InlineCode">Scan -&gt; Options -&gt; Requests to process</code>.</li>
+  <li>Browse the application using Burp's built-in browser to generate traffic.</li>
+  <li>Open the extension's tab to view which requests have been actively scanned.</li>
+  <li>Review requests with a high "Interesting" rating that haven't been scanned (indicated by <code class="InlineCode">Scanned: false</code>).</li>
+  <li>Sort by the "Reason" column to understand why certain requests were or were not scanned.</li>
+  <li>Check the Dashboard for active scan findings.</li>
+</ol>
+
+<p><strong>Note:</strong> This extension requires the Hackvertor extension to be installed and active.</p>
